@@ -1,0 +1,35 @@
+/* زر المنتجات */
+.pos-btn {
+    height: 110px;
+    border-radius: 12px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
+    color: white;
+    border: none;
+}
+
+/* عند المرور */
+.pos-btn:hover {
+    background: linear-gradient(45deg, #0a58ca, #084298);
+}
+
+/* اسم المنتج */
+.product-name {
+    font-size: 18px;
+}
+
+/* السعر */
+.product-price {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* الكارت */
+#cart {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.card {
+    border-radius: 12px;
+}
