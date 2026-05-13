@@ -1,16 +1,25 @@
 
 <!DOCTYPE html>
-<html>
+
+<html lang="ar" dir="rtl">
     <head>
         <title>POS System</title>
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
             <style>
 
+        
         body{
             background:#f5f7fb;
+            font-family: 'Cairo', sans-serif;
+            direction: right;
+            text-algin: right;
         }
-
+        
+        .table{
+            text-algin: right;
+        }
         .sidebar{
             width:240px;
             min-height:100vh;
@@ -25,6 +34,7 @@
             border-radius:10px;
             margin-bottom:8px;
             transition:0.3s;
+            text-algin: right;
         }
 
         .sidebar a:hover{
@@ -47,6 +57,8 @@
             border-radius:15px;
             padding:20px;
             box-shadow:0 2px 10px rgba(0,0,0,0.05);
+            text-align: right;
+
         }
         .nav-link{
             color:#d1d5db;
@@ -61,6 +73,12 @@
             background:#1f2937;
             color:white;
         }
+        .list-group-item{
+            text-algin: right;
+        }
+        .row{
+            flex-direction: row-reverse;
+        }
 
     </style>
     </head>
@@ -71,31 +89,31 @@
     <div class="sidebar p-3">
 
         <h3 class="text-white fw-bold mb-4">
-            POS System
+            نظام نقطة البيع
         </h3>
         
         @php
                 $menu = [];
             if(auth()-> user()->role == 'admin'){
                 $menu = [
-                ['name' => 'Dashboard', 'link' => '/dashboard'],
-                ['name' => 'Products', 'link' => '/products'],
-                ['name' => 'Inventory', 'link' => '/inventory'],
-                ['name' => 'POS', 'link' => '/pos'],
-                ['name' => 'Sales', 'link' => '/sales'],
-                ['name' => 'Users', 'link' => '/users'],
-                ['name' => 'Reports', 'link' => '/reports'],
+                ['name' => 'لوحة التحكم', 'link' => '/dashboard'],
+                ['name' => 'المنتجات', 'link' => '/products'],
+                ['name' => 'المخزون', 'link' => '/inventory'],
+                ['name' => 'نقطة البيع', 'link' => '/pos'],
+                ['name' => 'المبيعات', 'link' => '/sales'],
+                ['name' => 'المستخدمين', 'link' => '/users'],
+                ['name' => 'التقارير', 'link' => '/reports'],
                 ];
             }
             if(auth()-> user()->role == 'cashier'){
                 $menu = [
-                ['name' => 'POS', 'link' => '/pos'],
+                ['name' => 'نقطة البيع', 'link' => '/pos'],
                 ];
             }
             if(auth()-> user()->role == 'inventory'){
                 $menu = [
-                ['name' => 'Inventory', 'link' => '/inventory'],
-                ['name' => 'Products', 'link' => '/products'],
+                ['name' => 'المخزون', 'link' => '/inventory'],
+                ['name' => 'المنتجات', 'link' => '/products'],
                 ];
             }
 
@@ -120,7 +138,7 @@
     <form method="POST" action="/logout">
     @csrf
             <button class="btn btn-danger w-100 mt-4">
-                Logout
+                تسجيل الخروج
             </button>
 
         </form>

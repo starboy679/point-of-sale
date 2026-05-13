@@ -164,11 +164,3 @@ Route::post('/logout', function(){
     
     return redirect('/login');
 });
-Route::get('/create-admin', function(){
-    \App\Models\User::create([
-        'name' => 'admin',
-        'password' => bcrypt('123456'),
-        'role' => 'admin',
-    ]);
-    return 'Admin created';
-});

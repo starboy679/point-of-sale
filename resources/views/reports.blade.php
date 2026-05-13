@@ -2,19 +2,19 @@
 @extends('layout')
 
 @section('content')
-    <h1>Reports</h1>
+    <h1>التقارير</h1>
 
     <hr>
 
-    <h4>Total Sales: {{ $total }}</h4>
-    <h4>Invoices Count: {{ $count }}</h4>
+    <h4>اجمالي المبيعات : {{ $total }}</h4>
+    <h4>حاسبة الفواتير: {{ $count }}</h4>
 
     <hr>
-    <h4>Top Selling Products</h4>
+    <h4>اكثر المنتجات مبيعا</h4>
     <table class="table table-border">
         <tr>
-            <th>Products</th>
-            <th>Quantity Sold</th>
+            <th>المنتجات</th>
+            <th>كميات مبيعة</th>
         </tr>
         
         @foreach($topProducts as $item)

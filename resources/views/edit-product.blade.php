@@ -6,7 +6,7 @@
 
     <div class="card shadow-sm">
         <div class="card-header bg-warning text-dark">
-            <h4>Edit Product</h4>
+            <h4>تعديل المستخدم</h4>
         </div>
 
         <div class="card-body">
@@ -16,22 +16,22 @@
                 @method('PUT')
 
                 <div class="mb-3">
-                    <label>Name</label>
+                    <label>الاسم</label>
                     <input type="text" name="name" value="{{ $product->name }}" class="form-control">
                 </div>
 
                 <div class="mb-3">
-                    <label>Price</label>
+                    <label>السعر</label>
                     <input type="number" name="price" value="{{ $product->price }}" class="form-control">
                 </div>
 
                 <div class="mb-3">
-                    <label>Quantity</label>
+                    <label>الكمية</label>
                     <input type="number" name="quantity" value="{{ $product->quantity }}" class="form-control">
                 </div>
 
-                <button class="btn btn-warning w-100">Update Product</button>
-                <a href="/products" class="btn btn-secondary mb-3" style="margin-top:20px">← Back</a>
+                <button class="btn btn-warning w-100">تحديث المنتج</button>
+                <a href="/products" class="btn btn-secondary mb-3" style="margin-top:20px">رجوع ←</a>
 
             </form>
 

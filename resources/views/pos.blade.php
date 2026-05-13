@@ -13,13 +13,13 @@ $products = \App\Models\Product::all();
     <div class="d-flex justify-content-between align-items-center mb-4">
 
         <h2 class="fw-bold">
-            POS System
+            نقطة البيع
         </h2>
 
         <input
             type="text"
             class="form-control w-25"
-            placeholder="Search Product">
+            placeholder="البحث عن منتج">
 
     </div>
 
@@ -44,11 +44,11 @@ $products = \App\Models\Product::all();
                             </h5>
 
                             <h4 class="text-primary mb-3">
-                                ${{ $product->price }}
+                                ج.س{{ $product->price }}
                             </h4>
 
                             <p class="text-muted">
-                                Stock: {{ $product->quantity }}
+                                الكمية {{ $product->quantity }}
                             </p>
 
                             <button
@@ -60,7 +60,7 @@ $products = \App\Models\Product::all();
                                     {{ $product->id }}
                                 )">
 
-                                Add To Cart
+                                اضافة للسلة
 
                             </button>
 
@@ -85,14 +85,14 @@ $products = \App\Models\Product::all();
                 <div class="card-body">
 
                     <h3 class="fw-bold mb-4">
-                        Cart
+                        السلة
                     </h3>
 
                     <button
                         class="btn btn-danger w-100 mb-3"
                         onclick="clearCart()">
 
-                        Clear Cart
+                        اخلاء السلة
 
                     </button>
 
@@ -100,8 +100,8 @@ $products = \App\Models\Product::all();
 
                     <h4 class="mb-4">
 
-                        Total:
-                        <span id="total">0</span> $
+                        المجموع
+                        <span id="total">0</span> ج.س
 
                     </h4>
 
@@ -124,7 +124,7 @@ $products = \App\Models\Product::all();
                             type="submit"
                             onclick="setTotal()">
 
-                            Checkout
+                            انهاء العملية
 
                         </button>
 

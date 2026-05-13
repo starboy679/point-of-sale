@@ -3,20 +3,20 @@
 @section('content')
 
 <div class="container-fluid">
-    <h2 class="mb-4">Inventory</h2>
+    <h2 class="mb-4">المخزون</h2>
 
     @if($lowStock > 0)
         <div class="alert alert-warning">
-            ⚠️ There are {{ $lowStock }} products low in stock
+            ⚠️هنالك عدد ({{ $lowStock }}) منتجات منخفضة الكمية
         </div>
     @endif
 
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>
-                <th>Name</th>
-                <th>Quantity</th>
-                <th>Status</th>
+                <th>الاسم</th>
+                <th>الكمية</th>
+                <th>الحالة</th>
             </tr>
         </thead>
 
@@ -29,13 +29,13 @@
 
                     <td>
                         @if($product->quantity == 0)
-                            <span class="badge bg-danger">Out</span>
+                            <span class="badge bg-danger">نفذ</span>
 
                         @elseif($product->quantity < 5)
-                            <span class="badge bg-warning text-dark">Low</span>
+                            <span class="badge bg-warning text-dark">منخفض</span>
 
                         @else
-                            <span class="badge bg-success">OK</span>
+                            <span class="badge bg-success">جيد</span>
                         @endif
                     </td>
                 </tr>

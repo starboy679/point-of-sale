@@ -5,17 +5,16 @@
 <div class="container mt-4">
 
     <div class="d-flex justify-content-between mb-3">
-        <h2>Users</h2>
-        <a href="/users/create" class="btn btn-primary">+ Add User</a>
+        <h2>المستخدمين</h2>
+        <a href="/users/create" class="btn btn-primary">مستخدم جديد +</a>
     </div>
 
     <table class="table table-bordered table-hover shadow-sm">
         <thead class="table-dark">
             <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th width="150">Actions</th>
+                <th>الاسم</th>
+                <th>الوظيفة</th>
+                <th width="150">تفاعلات</th>
             </tr>
         </thead>
 
@@ -23,27 +22,26 @@
             @foreach($users as $user)
             <tr>
                 <td>{{ $user->name }}</td>
-                <td>{{ $user->email }}</td>
 
                 <td>
                     @if($user->role == 'admin')
-                        <span class="badge bg-success">Admin</span>
+                        <span class="badge bg-success">مشرف</span>
                     @elseif($user->role == 'cashier')
-                        <span class="badge bg-primary">Cashier</span>
+                        <span class="badge bg-primary">محاسب</span>
                     @elseif($user->role == 'inventory')
-                        <span class="badge bg-warning text-dark">Inventory</span>
+                        <span class="badge bg-warning text-dark">المخزون</span>
                     @endif
                 </td>
 
                 <td>
-                    <a href="/users/{{ $user->id }}/edit" class="btn btn-sm btn-info">Edit</a>
+                    <a href="/users/{{ $user->id }}/edit" class="btn btn-sm btn-info">تعديل</a>
 
                     <form action="/users/{{ $user->id }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-sm btn-danger"
                                 onclick="return confirm('Delete this user?')">
-                            Delete
+                            حذف
                         </button>
                     </form>
                 </td>

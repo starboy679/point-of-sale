@@ -6,7 +6,7 @@
 
     <div class="card shadow-sm">
         <div class="card-header bg-primary text-white">
-            <h4>Add Product</h4>
+            <h4>اضافة منتج</h4>
         </div>
 
         <div class="card-body">
@@ -15,22 +15,22 @@
                 @csrf
 
                 <div class="mb-3">
-                    <label>Name</label>
+                    <label>الاسم</label>
                     <input type="text" name="name" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label>Price</label>
+                    <label>السعر</label>
                     <input type="number" name="price" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label>Quantity</label>
+                    <label>الكمية</label>
                     <input type="number" name="quantity" class="form-control" required>
                 </div>
 
-                <button class="btn btn-success w-100">Save Product</button>
-                <a href="/products" class="btn btn-secondary mb-3" style="margin-top:20px">← Back</a>
+                <button class="btn btn-success w-100">حفظ المنتج</button>
+                <a href="/products" class="btn btn-secondary mb-3" style="margin-top:20px">رجوع←</a>
 
             </form>
 

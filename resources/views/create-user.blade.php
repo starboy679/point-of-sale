@@ -6,7 +6,7 @@
 
     <div class="card shadow-sm">
         <div class="card-header bg-primary text-white">
-            <h4>Add User</h4>
+            <h4>مستخدم جديد</h4>
         </div>
 
         <div class="card-body">
@@ -15,26 +15,26 @@
                 @csrf
 
                 <div class="mb-3">
-                    <label>Name</label>
+                    <label>الاسم</label>
                     <input type="text" name="name" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label>Password</label>
+                    <label>كلمة المرور</label>
                     <input type="password" name="password" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label>Role</label>
+                    <label>الوظيفة</label>
                     <select name="role" class="form-control">
-                        <option value="admin">Admin</option>
-                        <option value="cashier">Cashier</option>
-                        <option value="inventory">Inventory</option>
+                        <option value="admin">مشرف</option>
+                        <option value="cashier">محاسب</option>
+                        <option value="inventory">المخزون</option>
                     </select>
                 </div>
 
-                <button class="btn btn-success w-100">Create User</button>
-                <a href="/users"class="btn btn-secondary w-100 mt-2">Back</a>
+                <button class="btn btn-success w-100">انشاء المستخدم</button>
+                <a href="/users"class="btn btn-secondary w-100 mt-2">رجوع</a>
 
             </form>
 

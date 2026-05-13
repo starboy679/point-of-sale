@@ -13,7 +13,7 @@
                 <div class="card-body p-4">
 
                     <h2 class="fw-bold mb-4">
-                        Edit User
+                        تعديل المستخدم
                     </h2>
 
                     <form method="POST" action="/users/{{ $user->id }}">
@@ -24,7 +24,7 @@
                         <div class="mb-3">
 
                             <label class="form-label">
-                                Username
+                                اسم المستخدم
                             </label>
 
                             <input
@@ -38,21 +38,21 @@
                         <div class="mb-3">
 
                             <label class="form-label">
-                                New Password
+                                كلمة مرور جديدة
                             </label>
 
                             <input
                                 type="password"
                                 name="password"
                                 class="form-control"
-                                placeholder="Leave blank to keep old password">
+                                placeholder="اتركه فارغ للحفاظ على كلمة المرور القديمة">
 
                         </div>
 
                         <div class="mb-4">
 
                             <label class="form-label">
-                                Role
+                                الوظيفة
                             </label>
 
                             <select
@@ -63,7 +63,7 @@
                                     value="admin"
                                     {{ $user->role == 'admin' ? 'selected' : '' }}>
 
-                                    Admin
+                                    مشرف
 
                                 </option>
 
@@ -71,7 +71,7 @@
                                     value="cashier"
                                     {{ $user->role == 'cashier' ? 'selected' : '' }}>
 
-                                    Cashier
+                                    محاسب
 
                                 </option>
 
@@ -79,7 +79,7 @@
                                     value="inventory"
                                     {{ $user->role == 'inventory' ? 'selected' : '' }}>
 
-                                    Inventory
+                                    المخزون
 
                                 </option>
 
@@ -89,7 +89,7 @@
 
                         <button class="btn btn-warning w-100">
 
-                            Update User
+                            تحديث المستخدم
 
                         </button>
 
@@ -97,7 +97,7 @@
                             href="/users"
                             class="btn btn-secondary w-100 mt-2">
 
-                            Back
+                            رجوع
 
                         </a>
 
